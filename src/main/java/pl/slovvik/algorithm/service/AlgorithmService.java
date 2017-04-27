@@ -18,9 +18,9 @@ public class AlgorithmService {
     @Autowired
     private Data data;
 
-    public void setAlgorithmsData(String virtualMemory, String physicalMemory, String stringReference) {
-        data.setVirtualMemory(Integer.valueOf(virtualMemory));
-        data.setPhysicalMemory(Integer.valueOf(physicalMemory));
-        data.setStringReference(Integer.valueOf(stringReference));
+    public void setAlgorithmsData(int virtualMemory, int physicalMemory, int stringReference) {
+        data.setVirtualMemory(virtualMemory);
+        data.setPhysicalMemory(physicalMemory);
+        data.setStringReference(stringReference);
     }
 }

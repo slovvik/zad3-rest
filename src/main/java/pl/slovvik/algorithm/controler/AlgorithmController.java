@@ -25,18 +25,10 @@ public class AlgorithmController {
             value = "/algorithm/fifo",
             params = {"virtualMemory", "physicalMemory", "stringReference"})
     public Data fifo(
-            @RequestParam(value = "virtualMemory", defaultValue = "3", required = false) String virtualMemory,
-            @RequestParam(value = "physicalMemory", defaultValue = "3", required = false) String physicalMemory,
-            @RequestParam(value = "stringReference", defaultValue = "3", required = false) String stringReference) {
+            @RequestParam(value = "virtualMemory", defaultValue = "10000", required = false) int virtualMemory,
+            @RequestParam(value = "physicalMemory", defaultValue = "10", required = false) int physicalMemory,
+            @RequestParam(value = "stringReference", defaultValue = "1000", required = false) int stringReference) {
         algorithmService.setAlgorithmsData(virtualMemory, physicalMemory, stringReference);
         return algorithmService.getData();
     }
-
-//    @CrossOrigin(origins = "http://localhost:4200")
-//    @RequestMapping(value = "/algorithm/fifo")
-//    public Data fifo() {
-//        return new Data(1,4,1);
-//    }
-
-
 }
